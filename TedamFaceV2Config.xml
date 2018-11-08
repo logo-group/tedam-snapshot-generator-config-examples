@@ -1,0 +1,726 @@
+﻿<xml>
+<rules>
+<rule name ='FormName' type ='FormName'>
+<finds type='Url'>
+</finds>
+<extracts>
+<target type='Tag' targetQuery=''>
+<extract type='String'>
+<node type='Url'></node>
+<queries>
+</queries>
+<value startIndexOf='TEDAMFaceV2' startAdd='11' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Title' targetQuery=''>
+<extract type='String'>
+<node type='Url'></node>
+<queries>
+</queries>
+<value startIndexOf='TEDAMFaceV2' startAdd='11' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Enabled' targetQuery=''>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='version geçici' type ='Version'>
+<finds type=''>
+</finds>
+<extracts>
+<target type='Tag' targetQuery=''>
+</target>
+<target type='Title' targetQuery=''>
+</target>
+<target type='Enabled' targetQuery=''>
+</target>
+</extracts>
+</rule>
+<rule name ='text alanlar' type ='Write'>
+<finds type='Element' typeValue='input'>
+<find>
+<node type='Attribute'>type</node>
+<operator>
+<equals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>text</parameter>
+</find>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<equals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter></parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag' targetQuery=''>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Title' targetQuery=''>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Value' targetQuery=''>
+<extract type='String'>
+<node type='Value'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Enabled' targetQuery=''>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='password alanlar' type ='Write'>
+<finds type='Element' typeValue='input'>
+<find>
+<node type='Attribute'>type</node>
+<operator>
+<equals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>password</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag' targetQuery=''>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Title' targetQuery=''>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Value' targetQuery=''>
+<extract type='String'>
+<node type='Value'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Enabled' targetQuery=''>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='buton alanlar' type ='Click'>
+<finds type='Element' typeValue='button'>
+<find>
+<node type='Attribute'>type</node>
+<operator>
+<equals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>submit</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag' targetQuery=''>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Title' targetQuery=''>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Enabled' targetQuery=''>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='div butonlar' type ='Click'>
+<finds type='Element' typeValue='div'>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>v-button</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag' targetQuery=''>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Title' targetQuery=''>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Enabled' targetQuery=''>
+<extract type='Boolean'>
+<node></node>
+<queries>
+<query>
+<node type='Attribute'>class</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>disabled</parameter>
+</query>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>false</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='vaadin text alanlar' type ='Write'>
+<finds type='Element' typeValue='input'>
+<find>
+<node type='Attribute'>type</node>
+<operator>
+<equals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>text</parameter>
+</find>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>v-textfield</parameter>
+</find>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<notContains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>v-datefield</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag' targetQuery=''>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Title' targetQuery=''>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Value' targetQuery=''>
+<extract type='String'>
+<node type='Value'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Enabled' targetQuery=''>
+<extract type='Boolean'>
+<node></node>
+<queries>
+<query>
+<node type='Attribute'>class</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>readonly</parameter>
+</query>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>false</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='vaadin text area' type ='Write'>
+<finds type='Element' typeValue='textarea'>
+</finds>
+<extracts>
+<target type='Tag' targetQuery=''>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Title' targetQuery=''>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Value' targetQuery=''>
+<extract type='String'>
+<node type='Value'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Enabled' targetQuery=''>
+<extract type='Boolean'>
+<node></node>
+<queries>
+<query>
+<node type='Attribute'>class</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>readonly</parameter>
+</query>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>false</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='vaadin combobox' type ='Write'>
+<finds type='Element' typeValue='div'>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>v-select</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag' targetQuery='select'>
+<extract type='String'>
+<node type='XPath'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Title' targetQuery='select'>
+<extract type='String'>
+<node type='XPath'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Value' targetQuery='select option:checked'>
+<extract type='String'>
+<node type='InnerText'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Enabled' targetQuery='select'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+<query>
+<node type='Attribute'>disabled</node>
+<operator>
+<notEquals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter></parameter>
+</query>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>false</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='vaadin checkbox' type ='Click'>
+<finds type='Element' typeValue='tr'>
+<find>
+<node type='Attribute'>role</node>
+<operator>
+<equals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>row</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag' targetQuery='td span input'>
+<extract type='String'>
+<node type='XPath'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Title' targetQuery='td span input'>
+<extract type='String'>
+<node type='XPath'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Enabled' targetQuery=''>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='vaadin treegrid row' type ='Click'>
+<finds type='Element' typeValue='td'>
+<find>
+<node type='Attribute'>role</node>
+<operator>
+<equals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>gridcell</parameter>
+</find>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>v-treegrid-cell</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag' targetQuery=''>
+<extract type='String'>
+<node type='XPath'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Title' targetQuery='div div'>
+<extract type='String'>
+<node type='InnerText'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Enabled' targetQuery=''>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='vaadin tree row' type ='Click'>
+<finds type='Element' typeValue='td'>
+<find>
+<node type='Attribute'>role</node>
+<operator>
+<equals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>gridcell</parameter>
+</find>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>v-tree8-cell</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag' targetQuery=''>
+<extract type='String'>
+<node type='XPath'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Title' targetQuery=''>
+<extract type='String'>
+<node type='InnerText'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Enabled' targetQuery=''>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='vaadin editor buton cancel' type ='Click'>
+<finds type='Element' typeValue='button'>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<equals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>v-grid-editor-cancel</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag' targetQuery=''>
+<extract type='String'>
+<node type='XPath'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Title' targetQuery=''>
+<extract type='String'>
+<node type='InnerText'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Enabled' targetQuery=''>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='vaadin editor buton save' type ='Click'>
+<finds type='Element' typeValue='button'>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<equals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>v-grid-editor-save</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag' targetQuery=''>
+<extract type='String'>
+<node type='XPath'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Title' targetQuery=''>
+<extract type='String'>
+<node type='InnerText'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Enabled' targetQuery=''>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='vaadin menuitem checkbox' type ='Click'>
+<finds type='Element' typeValue='span'>
+<find>
+<node type='Attribute'>role</node>
+<operator>
+<equals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>menuitemcheckbox</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag' targetQuery='span'>
+<extract type='String'>
+<node type='XPath'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Title' targetQuery='span'>
+<extract type='String'>
+<node type='InnerText'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Value' targetQuery=''>
+<extract type='Boolean'>
+<node></node>
+<queries>
+<query>
+<node type='Attribute'>class</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>unchecked</parameter>
+</query>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>false</value>
+</extract>
+</target>
+<target type='Enabled' targetQuery=''>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='vaadin menuitem' type ='Click'>
+<finds type='Element' typeValue='span'>
+<find>
+<node type='Attribute'>role</node>
+<operator>
+<equals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>menuitem</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag' targetQuery=''>
+<extract type='String'>
+<node type='XPath'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Title' targetQuery=''>
+<extract type='String'>
+<node type='XPath'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Enabled' targetQuery=''>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='vaadin window grid row' type ='Click'>
+<finds type='Element' typeValue='tr'>
+<find>
+<node type='Attribute'>role</node>
+<operator>
+<equals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>row</parameter>
+</find>
+<find>
+<node type='Attribute'>aria-selected</node>
+<operator>
+<equals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>false</parameter>
+</find>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<notContains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>dragsource</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag' targetQuery='td'>
+<extract type='String'>
+<node type='XPath'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Title' targetQuery='td'>
+<extract type='String'>
+<node type='XPath'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Enabled' targetQuery=''>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+</rules>
+</xml>

@@ -1,0 +1,1462 @@
+﻿<xml>
+<rules hasiframe="true">
+<rule name ='Form Name Alma' type ='FormName'>
+<finds type='Url'>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Url'></node>
+<queries>
+<query>
+<node type='Url'></node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>LOGOCRM</parameter>
+</query>
+</queries>
+<value startIndexOf='LOGOCRM' startAdd='' endIndexOf='Object' endAdd='6' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+<extract type='String'>
+<node type='Url'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='aspx' endAdd='-1' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Url'></node>
+<queries>
+<query>
+<node type='Url'></node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>ViewID=</parameter>
+</query>
+</queries>
+<value startIndexOf='LOGOCRM' startAdd='' endIndexOf='Object' endAdd='6' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+<extract type='String'>
+<node type='Url'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='aspx' endAdd='-1' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='null' endRegex='null'>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='version' type ='Version'>
+<finds type='Element' typeValue='input'>
+<find>
+<node type='Attribute'>id</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>LogoCRMVersionInfo</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='null' endRegex='null'></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Value'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='null' endRegex='null'></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='null' endRegex='null'>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='Tab Butonları' type ='Click'>
+<finds type='Element' typeValue='img'>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>dxtc-img dx-vam</parameter>
+</find>
+<find>
+<node type='Attribute'>id</node>
+<operator>
+<notContains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>pg_A</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>alt</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+<extract type='String'>
+<node type='XPath'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>alt</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='Kucuk Butonlar' type ='Click'>
+<finds type='Element' typeValue='a'>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>dxbButtonSys</parameter>
+</find>
+<find>
+<node type='Attribute'>id</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>DXC</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+<query>
+<node type='Attribute'>id</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>xaf_dvi</parameter>
+</query>
+</queries>
+<value startIndexOf='xaf_dvi' startAdd='7' endIndexOf='' endAdd='' wrapper='/ /' startRegex='_v' endRegex='_DX'></value>
+</extract>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='_DX' startAdd='3' endIndexOf='' endAdd='' wrapper='/ /' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+<query>
+<node type='Attribute'>id</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>xaf_dvi</parameter>
+</query>
+</queries>
+<value startIndexOf='xaf_dvi' startAdd='7' endIndexOf='' endAdd='' wrapper='' startRegex='_v' endRegex='_DXC'></value>
+</extract>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='_DX' startAdd='3' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='Text Alanlar' type ='Write'>
+<finds type='Element' typeValue='input'>
+<find>
+<node type='Attribute'>style</node>
+<operator>
+<notContains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>none</parameter>
+</find>
+<find>
+<node type='Attribute'>style</node>
+<operator>
+<notContains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>hidden</parameter>
+</find>
+<find>
+<node type='Attribute'>type</node>
+<operator>
+<equals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>text</parameter>
+</find>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<notContains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>dxh</parameter>
+</find>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>dxeEditAreaSys</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>name</node>
+<queries>
+<query>
+<node type='Attribute'>name</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>xaf_dvi</parameter>
+</query>
+<query>
+<node type='Attribute'>name</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>$DD</parameter>
+</query>
+</queries>
+<value startIndexOf='xaf_dvi' startAdd='7' endIndexOf='' endAdd='-4' wrapper='/ /' startRegex='' endRegex=''></value>
+</extract>
+<extract type='String'>
+<node type='Attribute'>name</node>
+<queries>
+<query>
+<node type='Attribute'>name</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>xaf_dvi</parameter>
+</query>
+</queries>
+<value startIndexOf='xaf_dvi' startAdd='7' endIndexOf='' endAdd='' wrapper='/ /' startRegex='$v' endRegex='xaf_dvi'></value>
+</extract>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+<query>
+<node type='Attribute'>id</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>DXFR</parameter>
+</query>
+</queries>
+<value startIndexOf='DXFR' startAdd='4' endIndexOf='' endAdd='' wrapper='/ /' startRegex='' endRegex=''></value>
+</extract>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>name</node>
+<queries>
+<query>
+<node type='Attribute'>name</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>xaf_dvi</parameter>
+</query>
+<query>
+<node type='Attribute'>name</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>$DD</parameter>
+</query>
+</queries>
+<value startIndexOf='xaf_dvi' startAdd='7' endIndexOf='' endAdd='-4' wrapper='/ /' startRegex='' endRegex=''></value>
+</extract>
+<extract type='String'>
+<node type='Attribute'>name</node>
+<queries>
+<query>
+<node type='Attribute'>name</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>xaf_dvi</parameter>
+</query>
+</queries>
+<value startIndexOf='xaf_dvi' startAdd='7' endIndexOf='' endAdd='' wrapper='/ /' startRegex='$v' endRegex='xaf_dvi'></value>
+</extract>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+<query>
+<node type='Attribute'>id</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>DXFR</parameter>
+</query>
+</queries>
+<value startIndexOf='DXFR' startAdd='4' endIndexOf='' endAdd='' wrapper='/ /' startRegex='' endRegex=''></value>
+</extract>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Value'>
+<extract type='String'>
+<node type='Value'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+<query>
+<node type='Attribute'>readonly</node>
+<operator>
+<equals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>readonly</parameter>
+</query>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>false</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='Password Alanlar' type ='Write'>
+<finds type='Element' typeValue='input'>
+<find>
+<node type='Attribute'>type</node>
+<operator>
+<equals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>password</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>name</node>
+<queries>
+<query>
+<node type='Attribute'>name</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>xaf_dvi</parameter>
+</query>
+</queries>
+<value startIndexOf='xaf_dvi' startAdd='7' endIndexOf='' endAdd='' wrapper='/ /' startRegex='null' endRegex='null'></value>
+</extract>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='/ /' startRegex='null' endRegex='null'></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>name</node>
+<queries>
+<query>
+<node type='Attribute'>name</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>xaf_dvi</parameter>
+</query>
+</queries>
+<value startIndexOf='xaf_dvi' startAdd='7' endIndexOf='' endAdd='' wrapper='' startRegex='null' endRegex='null'></value>
+</extract>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='null' endRegex='null'></value>
+</extract>
+</target>
+<target type='Value'>
+<extract type='String'>
+<node type='Value'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='null' endRegex='null'></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='null' endRegex='null'>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='Textarea' type ='Write'>
+<finds type='Element' typeValue='textarea'>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>name</node>
+<queries>
+<query>
+<node type='Attribute'>name</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>xaf_dvi</parameter>
+</query>
+</queries>
+<value startIndexOf='xaf_dvi' startAdd='7' endIndexOf='' endAdd='' wrapper='/ /' startRegex='null' endRegex='null'></value>
+</extract>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='/ /' startRegex='null' endRegex='null'></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>name</node>
+<queries>
+<query>
+<node type='Attribute'>name</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>xaf_dvi</parameter>
+</query>
+</queries>
+<value startIndexOf='xaf_dvi' startAdd='7' endIndexOf='' endAdd='' wrapper='' startRegex='null' endRegex='null'></value>
+</extract>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='null' endRegex='null'></value>
+</extract>
+</target>
+<target type='Value'>
+<extract type='String'>
+<node type='Value'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='null' endRegex='null'></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='null' endRegex='null'>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='Footer butonları' type ='Click'>
+<finds type='Element' typeValue='img'>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>dxeImage</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+<query>
+<node type='Attribute'>id</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>bottomShortcutPanel</parameter>
+</query>
+</queries>
+<value startIndexOf='bottomShortcutPanel' startAdd='20' endIndexOf='' endAdd='' wrapper='/ /' startRegex='' endRegex=''></value>
+</extract>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='/ /' startRegex='_v' endRegex='UserAppListEditor_control_UserAppListEditor'></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>title</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='ListView satirlar' type ='Click'>
+<finds type='Element' typeValue='tr'>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>DataRow</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+<query>
+<node type='Attribute'>id</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>xaf_dvi</parameter>
+</query>
+</queries>
+<value startIndexOf='xaf_dvi' startAdd='7' endIndexOf='' endAdd='' wrapper='/ /' startRegex='_v' endRegex='_DX'></value>
+</extract>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='/ /' startRegex='_v' endRegex='_DX'></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+<query>
+<node type='Attribute'>id</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>xaf_dvi</parameter>
+</query>
+</queries>
+<value startIndexOf='xaf_dvi' startAdd='7' endIndexOf='' endAdd='' wrapper='' startRegex='_v' endRegex='_DX'></value>
+</extract>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='_v' endRegex='_DX'></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='Checkboxlar' type ='Click'>
+<finds type='Element' typeValue='span'>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>dxICheckBox</parameter>
+</find>
+<find>
+<node type='Attribute'>id</node>
+<operator>
+<notContains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>cell</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+<query>
+<node type='Attribute'>id</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>xaf_dvi</parameter>
+</query>
+</queries>
+<value startIndexOf='xaf_dvi' startAdd='7' endIndexOf='' endAdd='' wrapper='/ /' startRegex='_v' endRegex='_DX'></value>
+</extract>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='/ /' startRegex='_v' endRegex='_DX'></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+<query>
+<node type='Attribute'>id</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>xaf_dvi</parameter>
+</query>
+</queries>
+<value startIndexOf='xaf_dvi' startAdd='7' endIndexOf='' endAdd='' wrapper='' startRegex='_v' endRegex='_DX'></value>
+</extract>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='3' endIndexOf='' endAdd='' wrapper='' startRegex='_v' endRegex='_DX'></value>
+</extract>
+</target>
+<target type='Value'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+<query>
+<node type='Attribute'>class</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>edtCheckBoxUnchecked</parameter>
+</query>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>false</value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+<query>
+<node type='Attribute'>class</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>Disabled</parameter>
+</query>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>false</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='Footer hakkında butonları' type ='Click'>
+<finds type='Element' typeValue='span'>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>dxeBase</parameter>
+</find>
+<find>
+<node type='Attribute'>onclick</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>return</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+<query>
+<node type='Attribute'>id</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>MySummaryListEditor</parameter>
+</query>
+</queries>
+<value startIndexOf='MySummaryListEditor' startAdd='' endIndexOf='' endAdd='' wrapper='/ /' startRegex='' endRegex=''></value>
+</extract>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+<query>
+<node type='Attribute'>id</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>MySummaryListEditor</parameter>
+</query>
+</queries>
+<value startIndexOf='MySummaryListEditor' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='label' startAdd='5' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='Tableda bulunan label' type ='Read'>
+<finds type='Element' typeValue='span'>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>dxeBase</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+<query>
+<node type='Attribute'>id</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>xaf_dvi</parameter>
+</query>
+<query>
+<node type='Attribute'>id</node>
+<operator>
+<notContains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>ctl01</parameter>
+</query>
+</queries>
+<value startIndexOf='xaf_dvi' startAdd='7' endIndexOf='' endAdd='' wrapper='/ $/' startRegex='_v' endRegex='xaf_'></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+<query>
+<node type='Attribute'>id</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>xaf_dvi</parameter>
+</query>
+</queries>
+<value startIndexOf='xaf_dvi' startAdd='7' endIndexOf='' endAdd='' wrapper='' startRegex='_v' endRegex='xaf_'></value>
+</extract>
+</target>
+<target type='Value'>
+<extract type='String'>
+<node type='InnerText'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='Sol Ust Menu' type ='Click'>
+<finds type='Element' typeValue='div'>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>dxnb-header</parameter>
+</find>
+<find>
+<node type='Attribute'>style</node>
+<operator>
+<notContains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>display:none</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='null' endRegex='null'></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='InnerText'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='null' endRegex='null'></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='null' endRegex='null'>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='Sol Alt Menu' type ='Click'>
+<finds type='Element' typeValue='div'>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>dxtv-nd</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='null' endRegex='null'></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='InnerText'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='null' endRegex='null'></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='null' endRegex='null'>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='Sol Alt Menu2' type ='Click'>
+<finds type='Element' typeValue='li'>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>dxnb-item dxnb-link</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='null' endRegex='null'></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='InnerText'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='null' endRegex='null'></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='null' endRegex='null'>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='Radio Butonlar' type ='Click'>
+<finds type='Element' typeValue='span'>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>dxeIRadioButton</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='xaf_dvi' startAdd='7' endIndexOf='' endAdd='-5' wrapper='/ /' startRegex='null' endRegex='null'></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='xaf_dvi' startAdd='7' endIndexOf='' endAdd='-5' wrapper='' startRegex='null' endRegex='null'></value>
+</extract>
+</target>
+<target type='Value'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+<query>
+<node type='Attribute'>class</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>Unchecked</parameter>
+</query>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='null' endRegex='null'>false</value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='null' endRegex='null'>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='li butonlar' type ='Click'>
+<finds type='Element' typeValue='li'>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>dxm-item</parameter>
+</find>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<notContains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>disabled</parameter>
+</find>
+<find>
+<node type='Attribute'>id</node>
+<operator>
+<notContains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>PagerBottom</parameter>
+</find>
+<find>
+<node type='Attribute'>id</node>
+<operator>
+<notContains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>ContextMenu</parameter>
+</find>
+<find>
+<node type='Attribute'>id</node>
+<operator>
+<notContains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>Template_Menu</parameter>
+</find>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<notContains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>dropDownExport</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+<query>
+<node type='Attribute'>id</node>
+<operator>
+<notContains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>_IS</parameter>
+</query>
+<query>
+<node type='Attribute'>id</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>ToolBar_Menu</parameter>
+</query>
+<query>
+<node type='Attribute'>id</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>xaf_dvi</parameter>
+</query>
+</queries>
+<value startIndexOf='xaf_dvi' startAdd='7' endIndexOf='' endAdd='' wrapper='/ /' startRegex='' endRegex=''></value>
+</extract>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>title</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+<query>
+<node type='Attribute'>id</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>xaf_dvi</parameter>
+</query>
+</queries>
+<value startIndexOf='xaf_dvi' startAdd='7' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='null' endRegex='null'>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='span label' type ='Read'>
+<finds type='Element' typeValue='span'>
+<find>
+<node type='Attribute'>style</node>
+<operator>
+<notContains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>display: none</parameter>
+</find>
+<find>
+<node type='Attribute'>style</node>
+<operator>
+<notContains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>hidden</parameter>
+</find>
+<find>
+<node type='Attribute'>onclick</node>
+<operator>
+<equals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter></parameter>
+</find>
+<find>
+<node type='Attribute'>id</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>View</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+<query>
+<node type='Attribute'>id</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>xaf_dvi</parameter>
+</query>
+</queries>
+<value startIndexOf='xaf_dvi' startAdd='7' endIndexOf='' endAdd='' wrapper='/ /' startRegex='_v' endRegex='xaf_'></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='xaf_dvi' startAdd='7' endIndexOf='' endAdd='' wrapper='' startRegex='_v' endRegex='xaf_'></value>
+</extract>
+</target>
+<target type='Value'>
+<extract type='String'>
+<node type='InnerText'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='link butonlar' type ='Click'>
+<finds type='Element' typeValue='a'>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>dxalink</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+<query>
+<node type='Attribute'>id</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>xaf_dvi</parameter>
+</query>
+</queries>
+<value startIndexOf='xaf_dvi' startAdd='7' endIndexOf='' endAdd='' wrapper='/ /' startRegex='null' endRegex='null'></value>
+</extract>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='null' endRegex='null'></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>title</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='null' endRegex='null'></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='null' endRegex='null'>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='td butonlar' type ='Click'>
+<finds type='Element' typeValue='td'>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>dxeButton</parameter>
+</find>
+<find>
+<node type='Attribute'>style</node>
+<operator>
+<notContains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>none</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+<query>
+<node type='Attribute'>id</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>xaf_dvi</parameter>
+</query>
+</queries>
+<value startIndexOf='xaf_dvi' startAdd='7' endIndexOf='' endAdd='' wrapper='/ /' startRegex='' endRegex=''></value>
+</extract>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='/ /' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>title</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='tr alanlar' type ='Read'>
+<finds type='Element' typeValue='tr'>
+<find>
+<node type='Attribute'>id</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>ErrorInfo</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Value'>
+<extract type='String'>
+<node type='InnerText'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='span label' type ='Read'>
+<finds type='Element' typeValue='span'>
+<find>
+<node type='Attribute'>id</node>
+<operator>
+<equals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>Vertical_VCC_VSL</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Value'>
+<extract type='String'>
+<node type='InnerText'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='td error' type ='Read'>
+<finds type='Element' typeValue='td'>
+<find>
+<node type='Attribute'>testfield</node>
+<operator>
+<equals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>ErrorInfo</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Value'>
+<extract type='String'>
+<node type='InnerText'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+</rules>
+</xml>

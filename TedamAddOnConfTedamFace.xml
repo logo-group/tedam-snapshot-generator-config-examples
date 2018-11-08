@@ -1,0 +1,165 @@
+﻿<xml>
+<rules>
+<rule name ='Alma' type ='FormName'>
+<finds type='Url'>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Url'></node>
+<queries>
+</queries>
+<value startIndexOf='TedamFace' startAdd='' endIndexOf='' endAdd='' wrapper='/ /'></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Url'></node>
+<queries>
+</queries>
+<value startIndexOf='TedamFace' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='Version geçici' type ='Version'>
+<finds type=''>
+</finds>
+<extracts>
+<target type='Tag'>
+</target>
+<target type='Title'>
+</target>
+<target type='Enabled'>
+</target>
+</extracts>
+</rule>
+<rule name ='Text' type ='InputTextBox'>
+<finds type='Element' typeValue='input'>
+<find>
+<node type='Attribute'>type</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>text</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='/ /'></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Value'>
+<extract type='String'>
+<node type='Value'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='Div Butonları' type ='Button'>
+<finds type='Element' typeValue='div'>
+<find>
+<node type='Attribute'>role</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>button</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='/ /'></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='Menü Butonarı' type ='Button'>
+<finds type='Element' typeValue='div'>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>valo-menu-item</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='InnerText'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='/ /'></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='InnerText'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+</rules>
+</xml>

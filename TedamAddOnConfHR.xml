@@ -1,0 +1,447 @@
+<xml>
+    <rules>
+        <rule name="Form Name Alma" type="FormName">
+            <finds type="Url">
+            </finds>
+            <extracts>
+                <target type="Tag">
+                    <!-- formname olarak gelen value degerine "%0.jfm" eklenmesi gerek jguarda oyle oldugu icin -->
+                    <extract type="String">
+                        <node type="Url" />
+                        <queries>
+                            <query>
+                                <node type="Url" />
+                                <operator>
+                                    <contains startIndexOf="" startAdd="" endIndexOf="" endAdd="" />
+                                </operator>
+                                <parameter>getnewentity</parameter>
+                            </query>
+                        </queries>
+                        <value startIndexOf="HRSelfService" startAdd="" endIndexOf="getnewentity" endAdd="12" wrapper="" />
+                    </extract>
+                    <extract type="String">
+                        <node type="Url" />
+                        <queries/>
+                        <value startIndexOf="HRSelfService" startAdd="" endIndexOf="" endAdd="" wrapper="" />
+                    </extract>
+                </target>
+                <target type="Title">
+                    <extract type="String">
+                        <node type="Url" />
+                        <queries>
+                            <query>
+                                <node type="Url" />
+                                <operator>
+                                    <contains startIndexOf="" startAdd="" endIndexOf="" endAdd="" />
+                                </operator>
+                                <parameter>getnewentity</parameter>
+                            </query>
+                        </queries>
+                        <value startIndexOf="HRSelfService" startAdd="" endIndexOf="getnewentity" endAdd="12" wrapper="" />
+                    </extract>
+                    <extract type="String">
+                        <node type="Url" />
+                        <queries/>
+                        <value startIndexOf="HRSelfService" startAdd="" endIndexOf="" endAdd="" wrapper="" />
+                    </extract>
+                </target>
+                <target type="Enabled">
+                    <extract type="Boolean">
+                        <node />
+                        <queries/>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="">true</value>
+                    </extract>
+                </target>
+            </extracts>
+        </rule>
+		<rule name="version" type="Version" /> 
+		<rule name="Butonlar" type="Button">
+            <finds type="Element" typeValue="button">
+            </finds>
+            <extracts>
+                <target type="Tag">
+                    <extract type="String">
+                        <node type="Attribute">id</node>
+                        <queries/>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="/ /" />
+                    </extract>
+                </target>
+                <target type="Title">
+                    <extract type="String">
+                        <node type="Attribute">id</node>
+                        <queries/>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="" />
+                    </extract>
+                </target>
+                <target type="Enabled">
+                    <extract type="Boolean">
+                        <node />
+                        <queries>
+                            <query>
+                                <node type="Attribute">disabled</node>
+                                <operator>
+                                    <contains startIndexOf="" startAdd="" endIndexOf="" endAdd="" />
+                                </operator>
+                                <parameter>disabled</parameter>
+                            </query>
+                        </queries>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="">false</value>
+                    </extract>
+                </target>
+            </extracts>
+        </rule>
+        <rule name="link butonlar" type="Button">
+            <finds type="Element" typeValue="a">
+            </finds>
+            <extracts>
+                <target type="Tag">
+                    <extract type="String">
+                        <node type="Attribute">id</node>
+                        <queries/>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="/ /" />
+                    </extract>
+                </target>
+                <target type="Title">
+                    <extract type="String">
+                        <node type="Attribute">id</node>
+                        <queries/>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="" />
+                    </extract>
+                </target>
+                <target type="Enabled">
+                    <extract type="Boolean">
+                        <node />
+                        <queries>
+                            <query>
+                                <node type="Attribute">disabled</node>
+                                <operator>
+                                    <contains startIndexOf="" startAdd="" endIndexOf="" endAdd="" />
+                                </operator>
+                                <parameter>disabled</parameter>
+                            </query>
+                        </queries>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="">false</value>
+                    </extract>
+                </target>
+            </extracts>
+        </rule>
+        <rule name="div Butonlar" type="Button">
+            <finds type="Element" typeValue="div">
+                <find>
+                    <node type="Attribute">class</node>
+                    <operator>
+                        <contains startIndexOf="" startAdd="" endIndexOf="" endAdd="" />
+                    </operator>
+                    <parameter>link-title</parameter>
+                </find>
+            </finds>
+            <extracts>
+                <target type="Tag">
+                    <extract type="String">
+                        <node type="Attribute">id</node>
+                        <queries/>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="/ /" />
+                    </extract>
+                    <extract type="String">
+                        <node type="InnerText" />
+                        <queries/>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="/ /" />
+                    </extract>
+                </target>
+                <target type="Title">
+                    <extract type="String">
+                        <node type="Attribute">id</node>
+                        <queries/>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="" />
+                    </extract>
+                    <extract type="String">
+                        <node type="InnerText" />
+                        <queries/>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="" />
+                    </extract>
+                </target>
+                <target type="Enabled">
+                    <extract type="Boolean">
+                        <node />
+                        <queries>
+                            <query>
+                                <node type="Attribute">disabled</node>
+                                <operator>
+                                    <contains startIndexOf="" startAdd="" endIndexOf="" endAdd="" />
+                                </operator>
+                                <parameter>disabled</parameter>
+                            </query>
+                        </queries>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="">false</value>
+                    </extract>
+                </target>
+            </extracts>
+        </rule>
+        <rule name="inputTextbox" type="InputTextBox">
+            <finds type="Element" typeValue="input">
+                <find>
+                    <node type="Attribute">type</node>
+                    <operator>
+                        <equals startIndexOf="" startAdd="" endIndexOf="" endAdd="" />
+                    </operator>
+                    <parameter>text</parameter>
+                </find>
+            </finds>
+            <extracts>
+                <target type="Tag">
+                    <extract type="String">
+                        <node type="Attribute">id</node>
+                        <queries/>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="/ /" />
+                    </extract>
+                </target>
+                <target type="Title">
+                    <extract type="String">
+                        <node type="Attribute">id</node>
+                        <queries/>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="" />
+                    </extract>
+                </target>
+                <target type="Value">
+                    <extract type="String">
+                        <node type="Value"/>
+                        <queries/>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="" />
+                    </extract>
+                </target>
+                <target type="Enabled">
+                    <extract type="Boolean">
+                        <node />
+                        <queries>
+                            <query>
+                                <node type="Attribute">disabled</node>
+                                <operator>
+                                    <contains startIndexOf="" startAdd="" endIndexOf="" endAdd="" />
+                                </operator>
+                                <parameter>disabled</parameter>
+                            </query>
+                        </queries>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="">false</value>
+                    </extract>
+                </target>
+            </extracts>
+        </rule>
+        <rule name="inputPassword" type="InputPassword">
+            <finds type="Element" typeValue="input">
+                <find>
+                    <node type="Attribute">type</node>
+                    <operator>
+                        <equals startIndexOf="" startAdd="" endIndexOf="" endAdd="" />
+                    </operator>
+                    <parameter>password</parameter>
+                </find>
+            </finds>
+            <extracts>
+                <target type="Tag">
+                    <extract type="String">
+                        <node type="Attribute">id</node>
+                        <queries/>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="/ /" />
+                    </extract>
+                </target>
+                <target type="Title">
+                    <extract type="String">
+                        <node type="Attribute">id</node>
+                        <queries/>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="" />
+                    </extract>
+                </target>
+				<target type="Value">
+                    <extract type="String">
+                        <node type="Value"/>
+                        <queries/>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="" />
+                    </extract>
+                </target>
+                <target type="Enabled">
+                    <extract type="Boolean">
+                        <node />
+                        <queries>
+                            <query>
+                                <node type="Attribute">disabled</node>
+                                <operator>
+                                    <contains startIndexOf="" startAdd="" endIndexOf="" endAdd="" />
+                                </operator>
+                                <parameter>disabled</parameter>
+                            </query>
+                        </queries>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="">false</value>
+                    </extract>
+                </target>
+            </extracts>
+        </rule>
+        <rule name="submit butonlar" type="Button">
+            <finds type="Element" typeValue="input">
+                <find>
+                    <node type="Attribute">type</node>
+                    <operator>
+                        <equals startIndexOf="" startAdd="" endIndexOf="" endAdd="" />
+                    </operator>
+                    <parameter>submit</parameter>
+                </find>
+            </finds>
+            <extracts>
+                <target type="Tag">
+                    <extract type="String">
+                        <node type="Attribute">id</node>
+                        <queries/>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="/ /" />
+                    </extract>
+                </target>
+                <target type="Title">
+                    <extract type="String">
+                        <node type="Attribute">id</node>
+                        <queries/>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="" />
+                    </extract>
+                </target>
+                <target type="Enabled">
+                    <extract type="Boolean">
+                        <node />
+                        <queries>
+                            <query>
+                                <node type="Attribute">disabled</node>
+                                <operator>
+                                    <contains startIndexOf="" startAdd="" endIndexOf="" endAdd="" />
+                                </operator>
+                                <parameter>disabled</parameter>
+                            </query>
+                        </queries>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="">false</value>
+                    </extract>
+                </target>
+            </extracts>
+        </rule>
+        <rule name="inputTextArea" type="InputTextArea">
+            <finds type="Element" typeValue="textarea">
+            </finds>
+            <extracts>
+                <target type="Tag">
+                    <extract type="String">
+                        <node type="Attribute">id</node>
+                        <queries/>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="/ /" />
+                    </extract>
+                </target>
+                <target type="Title">
+                    <extract type="String">
+                        <node type="Attribute">id</node>
+                        <queries/>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="" />
+                    </extract>
+                </target>
+                <target type="Value">
+                    <extract type="String">
+                        <node type="Value"/>
+                        <queries/>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="" />
+                    </extract>
+                </target>
+                <target type="Enabled">
+                    <extract type="Boolean">
+                        <node />
+                        <queries>
+                            <query>
+                                <node type="Attribute">disabled</node>
+                                <operator>
+                                    <contains startIndexOf="" startAdd="" endIndexOf="" endAdd="" />
+                                </operator>
+                                <parameter>disabled</parameter>
+                            </query>
+                        </queries>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="">false</value>
+                    </extract>
+                </target>
+            </extracts>
+        </rule>
+        <rule name="comboboxlar" type="Combobox">
+            <finds type="Element" typeValue="select">
+            </finds>
+            <extracts>
+                <target type="Tag">
+                    <extract type="String">
+                        <node type="Attribute">id</node>
+                        <queries/>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="/ /" />
+                    </extract>
+                </target>
+                <target type="Title">
+                    <extract type="String">
+                        <node type="Attribute">id</node>
+                        <queries/>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="" />
+                    </extract>
+                </target>
+				<target type="Value">
+                    <extract type="String">
+                        <node type="Value"/>
+                        <queries/>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="" />
+                    </extract>
+                </target>
+                <target type="Enabled">
+                    <extract type="Boolean">
+                        <node />
+                        <queries>
+                            <query>
+                                <node type="Attribute">disabled</node>
+                                <operator>
+                                    <contains startIndexOf="" startAdd="" endIndexOf="" endAdd="" />
+                                </operator>
+                                <parameter>disabled</parameter>
+                            </query>
+                        </queries>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="">false</value>
+                    </extract>
+                </target>
+            </extracts>
+        </rule>
+        <rule name="td buton" type="Button">
+            <finds type="Element" typeValue="td">
+                <find>
+                    <node type="Attribute">id</node>
+                    <operator>
+                        <contains startIndexOf="" startAdd="" endIndexOf="" endAdd="" />
+                    </operator>
+                    <parameter>btn</parameter>
+                </find>
+            </finds>
+            <extracts>
+                <target type="Tag">
+                    <extract type="String">
+                        <node type="Attribute">title</node>
+                        <queries/>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="/ /" />
+                    </extract>
+                </target>
+                <target type="Title">
+                    <extract type="String">
+                        <node type="Attribute">title</node>
+                        <queries/>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="" />
+                    </extract>
+                </target>
+                <target type="Enabled">
+                    <extract type="Boolean">
+                        <node />
+                        <queries>
+                            <query>
+                                <node type="Attribute">disabled</node>
+                                <operator>
+                                    <contains startIndexOf="" startAdd="" endIndexOf="" endAdd="" />
+                                </operator>
+                                <parameter>disabled</parameter>
+                            </query>
+                        </queries>
+                        <value startIndexOf="" startAdd="" endIndexOf="" endAdd="" wrapper="">false</value>
+                    </extract>
+                </target>
+            </extracts>
+        </rule>
+       </rules>
+</xml>

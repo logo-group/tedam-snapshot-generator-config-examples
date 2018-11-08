@@ -1,0 +1,698 @@
+﻿<xml>
+<rules>
+<rule name ='FormName geçici' type ='FormName'>
+<finds type='Url'>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Url'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='/ /'></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Url'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='Version geçici' type ='Version'>
+<finds type='Element' typeValue='span'>
+<find>
+<node type='Attribute'>id</node>
+<operator>
+<equals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>product-version</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='InnerText'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='Password alanlar' type ='Write'>
+<finds type='Element' typeValue='input'>
+<find>
+<node type='Attribute'>type</node>
+<operator>
+<equals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>password</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Value'>
+<extract type='String'>
+<node type='Value'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='Textbox alanlar' type ='Write'>
+<finds type='Element' typeValue='input'>
+<find>
+<node type='Attribute'>type</node>
+<operator>
+<equals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>text</parameter>
+</find>
+<find>
+<node type='Attribute'>style</node>
+<operator>
+<notContains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>display:none</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+<extract type='String'>
+<node type='Attribute'>name</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+<extract type='String'>
+<node type='Attribute'>name</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Value'>
+<extract type='String'>
+<node type='Value'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='Select alanlar' type ='Click'>
+<finds type='Element' typeValue='select'>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Value'>
+<extract type='String'>
+<node type='Value'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='Input Butonlar' type ='Click'>
+<finds type='Element' typeValue='input'>
+<find>
+<node type='Attribute'>type</node>
+<operator>
+<equals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>button</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='Submit butonlar' type ='Click'>
+<finds type='Element' typeValue='input'>
+<find>
+<node type='Attribute'>type</node>
+<operator>
+<equals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>submit</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='link butonlar' type ='Click'>
+<finds type='Element' typeValue='a'>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<notContains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>t-link</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+<extract type='String'>
+<node type='XPath'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+<extract type='String'>
+<node type='InnerText'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='Menu klasör butonları' type ='Click'>
+<finds type='Element' typeValue='li'>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>icon_folder</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='Menu file butonları' type ='Click'>
+<finds type='Element' typeValue='a'>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>t-link</parameter>
+</find>
+<find>
+<node type='Attribute'>href</node>
+<operator>
+<notEquals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter></parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='XPath'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='InnerText'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='Input Checkbox Butonlar' type ='Write'>
+<finds type='Element' typeValue='input'>
+<find>
+<node type='Attribute'>type</node>
+<operator>
+<equals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>checkbox</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Value'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+<query>
+<node type='Attribute'>checked</node>
+<operator>
+<equals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>true</parameter>
+</query>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''>true</value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='TextArea alanlar' type ='Write'>
+<finds type='Element' typeValue='textarea'>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>name</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Value'>
+<extract type='String'>
+<node type='Value'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='span click combobox' type ='Click'>
+<finds type='Element' typeValue='span'>
+<find>
+<node type='Attribute'>id</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>select</parameter>
+</find>
+<find>
+<node type='Attribute'>id</node>
+<operator>
+<notContains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>Enum</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>id</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Value'>
+<extract type='String'>
+<node type='InnerText'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='butonlar' type ='Click'>
+<finds type='Element' typeValue='button'>
+<find>
+<node type='Attribute'>onclick</node>
+<operator>
+<notEquals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter></parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='XPath'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='InnerText'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='tablo satirlari' type ='Click'>
+<finds type='Element' typeValue='tr'>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='XPath'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='InnerText'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='img butonlar' type ='Click'>
+<finds type='Element' typeValue='img'>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='XPath'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>title</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+<rule name ='radio butonlar' type ='Click'>
+<finds type='Element' typeValue='input'>
+<find>
+<node type='Attribute'>type</node>
+<operator>
+<equals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>radio</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag'>
+<extract type='String'>
+<node type='Attribute'>class</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Title'>
+<extract type='String'>
+<node type='Attribute'>class</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''></value>
+</extract>
+</target>
+<target type='Enabled'>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
+</rules>
+</xml>

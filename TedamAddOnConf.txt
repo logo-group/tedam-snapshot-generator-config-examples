@@ -1,0 +1,69 @@
+ <value startIndexOf="" startAdd="" endIndexOf="0" endAdd="" />
+bos string dondurur
+						
+<value startIndexOf="" startAdd="" endIndexOf="" endAdd="" />
+ tüm stringi dondurur
+ 
+ rules hasiframe="true" ise bu sayfa iframe e sahip ve iframe var ise öncelikli olarak o gosterilecek.
+ 
+ formfieldtypesahi =  link, textbox, password,textarea,label,select
+ 
+ rule type = BUTTON,INPUTTEXT,INPUTPASSWORD,INPUTAREA,LABEL, FORMNAME, VERSION
+ 
+ rule daki querry ler 've' ile bağlanacak
+ 
+ extract lar sira ile bakilmasi gerekir. 1.olmazsa 2. denenecek , 2.olmazsa 3. denenecek...
+ 
+ boolean extract lardaki query saglanirsa value setlenir, query saglanmiyorsa value nin zitti setlenir.
+ 
+ operator =>  equals   <equals startIndexOf="" startAdd="" endIndexOf="" endAdd="" />   startIndexOf verilen ilk parametrenin basladigi index, startAdd bu parametrenin basladigi index ten sonra kac eklenecek, endIndexOf verilen son parametrenin basladigi index, endAdd bu parametrenin basladigi indexten sonra kac eklenecek. (endAdd ve startAdd integer deger girilebilir yani - deger olabilir)
+ operator => contains  <contains startIndexOf="" startAdd="" endIndexOf="" endAdd="" />
+
+ node type => element 	<node type="element"/>
+ node type =>attribute 	<node type="attribute">class</node> 
+ node type =>url 		<node type="url"/> 
+ 
+ extract type => 	STRING > querry deki kosul saglanirsa value nun verilen parametreler arasindaki degeri setlenir.
+ extract type =>	BOOLEAN > querry deki kosul saglanirsa value setlenir, aksi takdirde boolean olan diger value setlenir.
+ 
+ target type => TAG xml dosyasinda tag olarak yazilacak degeri belirler.
+ target type => TITLE xml dosyasinda title olarak yazilacak degeri belirler.
+ target type => VALUE xml dosyasinda value olarak yazilacak degeri belirler.
+ target type => ENABLE xml dosyasinda enable olarak yazilacak degeri query saglanirsa verilen value degerini saglanmazsa verilen value degerinin tersi olarak setler.
+ target type =>	NAME xml dosyasinda ilk olarak yazilacak olan formname degerini belirler.
+  
+ <query>
+    <node type="type" />
+		<operator>
+			<equals startIndexOf="" startAdd="" endIndexOf="" endAdd="" />
+        </operator>
+	<value>value</value>
+</query>
+
+<target type="TAG">
+	<extract type="STRING">
+		<node type="attribute">name</node>
+			<queries>
+				<query>
+					<node type="attribute">name</node>
+						<operator>
+							<contains startIndexOf="" startAdd="" endIndexOf="" endAdd="" />
+						</operator>
+					<value>xaf_dvi</value>
+				</query>
+			</queries>
+		<value startIndexOf="xaf_dvi" startAdd="7" endIndexOf="" endAdd="" wrapper="/ /" />
+	</extract>
+</target> 
+ * elimizde olan objenin attributelerinden name ine bakilir eger xaf_dvi iceriyorsa query true doner ve objenin tag ine xaf_dvi nin basladigi index ten 7 sonrasından itibaren sonuna kadar / / lar arasina alınarak setlenir.
+ 
+formname olarak gelen value degerine "%0.jfm" eklenmesi gerek jguarda oyle oldugu icin
+
+!!!!!!! replace(/&/g, "&amp;") yapilmasi gerek kodun icinde
+
+config xml dosyasinda birden fazla formName olabilir bunun anlami, formName bos oldugu surece sira ile tum rule'lar calisacak
+
+remove yaptigimiz zaman, degisiklik yapildiginda veya yeni rule eklendigi zaman sayfanın kapatilmasi, yeniden yuklenmesi icin uyari ekrani gelir.
+
+ 
+ 
