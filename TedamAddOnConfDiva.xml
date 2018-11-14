@@ -1109,5 +1109,42 @@
 </target>
 </extracts>
 </rule>
+<rule name ='tab items' type ='Click'>
+<finds type='Element' typeValue='li'>
+<find>
+<node type='Attribute'>class</node>
+<operator>
+<contains startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>responsive-tabs__list__item</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag' targetQuery=''>
+<extract type='String'>
+<node type='XPath'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Title' targetQuery=''>
+<extract type='String'>
+<node type='InnerText'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Enabled' targetQuery=''>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
 </rules>
 </xml>
