@@ -1146,5 +1146,50 @@
 </target>
 </extracts>
 </rule>
+<rule name ='tutar field' type ='Write'>
+<finds type='Element' typeValue='div'>
+<find>
+<node type='Attribute'>id</node>
+<operator>
+<equals startIndexOf='' startAdd='' endIndexOf='' endAdd=''/>
+</operator>
+<parameter>nw_Tutar</parameter>
+</find>
+</finds>
+<extracts>
+<target type='Tag' targetQuery='input'>
+<extract type='String'>
+<node type='XPath'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Title' targetQuery='input'>
+<extract type='String'>
+<node type='Attribute'>name</node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Value' targetQuery=''>
+<extract type='String'>
+<node type='Value'></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''></value>
+</extract>
+</target>
+<target type='Enabled' targetQuery=''>
+<extract type='Boolean'>
+<node></node>
+<queries>
+</queries>
+<value startIndexOf='' startAdd='' endIndexOf='' endAdd='' wrapper='' startRegex='' endRegex=''>true</value>
+</extract>
+</target>
+</extracts>
+</rule>
 </rules>
 </xml>
